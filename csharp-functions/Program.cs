@@ -14,6 +14,7 @@ namespace csharp_functions
             // stampa array
             void StampaArray(int[] array)
             {
+                Console.WriteLine("Questo é l' array dei numeri:");
                 Console.Write("( ");
                 
                 for (int i = 0; i < array.Length; i++)
@@ -42,7 +43,8 @@ namespace csharp_functions
             // array di tutti i numeri elevati al quadrato
             int[] ElevaAlQuadrato(int[] array)
             {
-                
+                Console.WriteLine("Questo é l' array dei numeri elevati al quadrato:");
+
                 Console.Write("( ");
 
                 for (int i = 0;i < array.Length;i++)
@@ -83,12 +85,12 @@ namespace csharp_functions
             
             StampaArray(arrayNum);
 
+            sommaElementiArray(arrayNum);
+            
             for (int i = 0; i < arrayNum.Length; i++)
             {
                 Quadrato(arrayNum[i]);
             }
-
-            sommaElementiArray(arrayNum);
 
             ElevaAlQuadrato(arrayNum);
         }
