@@ -29,7 +29,6 @@ namespace csharp_functions
                 Console.WriteLine(" )");
             }
 
-
             // quadrato di ogni numero presente nell'array
             int Quadrato(int numero)
             {
@@ -56,9 +55,12 @@ namespace csharp_functions
                         {
                             Console.Write(", ");
                         }
+
                     }
 
                 Console.WriteLine(" )");
+
+                
 
                 return array;
             }
@@ -78,21 +80,48 @@ namespace csharp_functions
                 return sum;
             }
 
+            int sommaElementiArrayQuadrati(int[] array)
+            {
+                int sum = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    sum = array[i] * array[i] + sum;
+                }
+
+                return sum;
+            }
+
 
             // tutte le operazioni di dati
 
+
+            // qui definisco l'array principale
             int[] arrayNum = { 2, 6, 7, 5, 3, 9 };
             
+
+            // stampo l'array dei numeri interi
             StampaArray(arrayNum);
 
+
+            // faccio la somma dei numeri interi
             sommaElementiArray(arrayNum);
             
+
+            // faccio un ciclo per tutti i numeri presi singolarmente al quadrato
             for (int i = 0; i < arrayNum.Length; i++)
             {
                 Quadrato(arrayNum[i]);
             }
 
-            ElevaAlQuadrato(arrayNum);
+
+            // richiamo la funzione sommaElementiArrayQuadrati per l'array di numeri al quadrato e faccio la soma
+            {
+                int[] arrayQuadrati = ElevaAlQuadrato(arrayNum);
+
+                int sommaQuadrati = sommaElementiArrayQuadrati(arrayQuadrati);
+
+                Console.WriteLine($"La somma dei quadrati dei numeri é {sommaQuadrati}");
+            }
         }
     }
 }
