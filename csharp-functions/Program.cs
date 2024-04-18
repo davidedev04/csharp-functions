@@ -7,6 +7,11 @@ namespace csharp_functions
     {
         static void Main(string[] args)
         {
+
+            // tutte le funzioni richieste
+
+
+            // stampa array
             void StampaArray(int[] array)
             {
                 Console.Write("( ");
@@ -23,6 +28,8 @@ namespace csharp_functions
                 Console.WriteLine(" )");
             }
 
+
+            // quadrato di ogni numero presente nell'array
             int Quadrato(int numero)
             {
                 int quadratoNumber = numero * numero;
@@ -31,6 +38,8 @@ namespace csharp_functions
                 return numero;
             }
      
+
+            // array di tutti i numeri elevati al quadrato
             int[] ElevaAlQuadrato(int[] array)
             {
                 
@@ -47,10 +56,28 @@ namespace csharp_functions
                         }
                     }
 
-                Console.Write(" )");
+                Console.WriteLine(" )");
 
                 return array;
             }
+
+
+            // somma di tutti i numeri presenti nell'array
+            int sommaElementiArray(int[] array)
+            {
+                int sum = 0;
+                for (int i = 0; i < array.Length; i++)
+                {
+                    sum = array[i] + sum;
+                }
+
+                Console.WriteLine($"La somma totale dei numeri é {sum}");
+
+                return sum;
+            }
+
+
+            // tutte le operazioni di dati
 
             int[] arrayNum = { 2, 6, 7, 5, 3, 9 };
             
@@ -60,6 +87,8 @@ namespace csharp_functions
             {
                 Quadrato(arrayNum[i]);
             }
+
+            sommaElementiArray(arrayNum);
 
             ElevaAlQuadrato(arrayNum);
         }
